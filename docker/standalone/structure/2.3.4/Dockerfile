@@ -43,7 +43,7 @@ ADD structure_linux_console.tar.gz /
     #cd /data && \
     #wget https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/release/structure_linux_console.tar.gz && \
     #tar xzvf structure_linux_console.tar.gz && \
-RUN cp console/* /data && \
+RUN cp console/structure /data && \
     rm -r console
 
 # Change user
