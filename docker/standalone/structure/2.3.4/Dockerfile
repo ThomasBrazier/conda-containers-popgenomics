@@ -1,5 +1,5 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:v1.0.0_cv4
+FROM debian:stretch
 
 ################## METADATA ######################
 LABEL base_image="biocontainers:v1.0.0_cv4"
@@ -19,14 +19,40 @@ MAINTAINER Thomas Brazier <brazier.thomas@gmail.com>
 
 ################## INSTALLATION ######################
 
-ADD structure_linux_console.tar.gz /tmp/
+ENV DEBIAN_FRONTEND noninteractive
+RUN mkdir /data /config
 
-RUN cp /tmp/console/* /data/ && ls /data
+RUN apt-get clean all && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get clean && \
+    apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Add user biodocker with password biodocker
+RUN groupadd fuse && \
+    useradd --create-home --shell /bin/bash --user-group --uid 1000 --groups sudo,fuse biodocker && \
+    echo `echo "biodocker\nbiodocker\n" | passwd biodocker` && \
+    chown biodocker:biodocker /data && \
+    chown biodocker:biodocker /config
+
+ADD structure_linux_console.tar.gz /
+
+#RUN apt update && apt upgrade -y && \
+    #apt install wget -y && \
+    #cd /data && \
+    #wget https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/release/structure_linux_console.tar.gz && \
+    #tar xzvf structure_linux_console.tar.gz && \
+RUN cp console/* /data && \
+    rm -r console
+
+# Change user
 USER biodocker
+#ENV PATH /home/biodocker/bin:$PATH
 
-ENV PATH /home/biodocker/bin:$PATH
+ENV PATH=$PATH:/home/biodocker/bin
+ENV HOME=/home/biodocker
 
-#WORKDIR /data/
+RUN mkdir /home/biodocker/bin
 
-RUN ls /data
+WORKDIR /data/

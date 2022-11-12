@@ -1,4 +1,4 @@
-# devops-academic
+# Containers and VMs for Population Genomics
 
 Deployment and administration of VMs, virtual env and containers applied for academic researchin the field of population genomics. This repository is a centralized repository which contains dockers and VMs that served me at some point.
 
