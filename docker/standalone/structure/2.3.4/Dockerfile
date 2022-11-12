@@ -2,8 +2,8 @@
 FROM debian:stretch
 
 ################## METADATA ######################
-LABEL base_image="biocontainers:v1.0.0_cv4"
-LABEL version="3"
+LABEL base_image="debian:stretch"
+LABEL version="1.0"
 LABEL software="structure"
 LABEL software.version="2.3.4"
 LABEL about.summary="The program structure is a free software package for using multi-locus genotype data to investigate population structure."
