@@ -1,0 +1,13 @@
+# Structure 2.3.4
+
+Release [2.3.4](https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html).
+
+This docker is compatible with Biocontainers guidelines and practices, though with minor adjustements. The working directory is `/data`. The user is `biodocker`.
+
+## Usage
+
+`Structure` is a standalone program which has to be in the same directory than data and config files `mainparams` and `extraparams`. hence instead of being in `home/biodocker/bin` the application is in the zorking directory `/data`.
+
+You just need to bind your host working directory to the `/data` directory in the docker and put `mainparams` and `extraparams` config files and data files in your host working directory. Templates of `mainparams` and `extraparams` can be found in the `.tar.gz` archive in github repository.
+
+Call `structure` with `./structure`.
