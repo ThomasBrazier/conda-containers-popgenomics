@@ -1,0 +1,9 @@
+# CLUMPP 1.1.2
+
+Release [1.1.2](https://web.stanford.edu/group/rosenberglab/clumpp.html).
+
+This docker is compatible with Biocontainers guidelines and practices. The working directory is `/data`. The user is `biodocker`.
+
+## Usage
+
+`CLUMPP` is a program that deals with label switching and multimodality problems in population-genetic cluster analyses. CLUMPP permutes the clusters output by independent runs of clustering programs such as structure, so that they match up as closely as possible.
