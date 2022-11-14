@@ -1,0 +1,15 @@
+# LDhot 1.0
+
+Release [1.0](https://github.com/auton1/LDhot). https://arxiv.org/abs/1403.4264
+
+This docker is compatible with Biocontainers guidelines and practices. The working directory is `/data`. The user is `biodocker`.
+
+## Usage
+
+
+`LDhot` is a program to estimate recombination rates from population genetic data.
+
+The following programs are included:
+
+- <b>ldhot</b>
+- <b>ldhot_summary</b>
