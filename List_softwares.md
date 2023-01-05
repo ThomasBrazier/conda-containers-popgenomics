@@ -21,3 +21,4 @@ You can find lists of softwares here:
 * PyPop: Python for Population Genomics https://www.uvm.edu/~pypop/ http://pypop.org https://github.com/alexlancaster/pypop
 * Biopython Bio.PopGen package https://biopython.org/docs/1.75/api/Bio.PopGen.html
 * GenePop https://genepop.curtin.edu.au
+* Bio++ C++ Library https://github.com/BioPP
