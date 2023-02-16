@@ -3,7 +3,7 @@ FROM biocontainers/biocontainers:v1.2.0_cv2
 
 ################## METADATA ######################
 LABEL base_image="biocontainers:v1.2.0_cv2"
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL software="ldhot"
 LABEL software.version=""
 LABEL about.summary="Detect recombination hotspots using population genetic data."
@@ -33,23 +33,14 @@ RUN apt update \
   libssl-dev \
   libgmp-dev \
   libmpfr-dev \
-  libgsl-dev 
+  libgsl-dev \
+  libomp-dev \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN cd /home/biodocker/bin && \
-    git clone https://github.com/auton1/LDhot.git LDhot && \
+    git clone http://github.com/ThomasBrazier/LDhot-docker.git LDhot && \
     cd LDhot && \
-    make MULTI=1 CC=gcc-10 CPP=g++-10 CXX=g++-10 LD=g++-10
-
-RUN apt remove -y \
-  git \
-  g++ \
-  make \
-  ca-certificates \
-  libssl-dev \
-  libgmp-dev \
-  libmpfr-dev \
-  libgsl-dev \
-  && rm -rf /var/lib/apt/lists/*
+    make MULTI=1
 
 USER biodocker
 
