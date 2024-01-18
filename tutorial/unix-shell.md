@@ -1,5 +1,7 @@
 # Unix Shell
 
+https://doc.ubuntu-fr.org/projets/ecole/scripting/initiation_au_shell
+
 
 ## How the shell works and how to get help
 
@@ -63,6 +65,9 @@ Autocompletion
 
 Wildcards
 
+history
+
+
 ## View files
 
 cat, zcat
@@ -73,6 +78,8 @@ head
 
 tail
 
+cut -f
+cut columns
 
 
 ## Move and modify files
@@ -88,10 +95,15 @@ Prudence. On ne peux pas annuler, ne demande pas de confirmation
 mkdir
 
 gunzip, gzip
-
+bgzip
 
 rsync
+scp
 
+
+## File types and format
+
+dos2unix
 
 ## Selection
 
@@ -120,7 +132,7 @@ run a script
 read a file line by line
 
 
-## Connections
+## Remote operations
 
 
 ssh

@@ -1,0 +1,15 @@
+# Pyrho
+
+Release [0.1.0](https://github.com/popgenmethods/pyrho).
+
+This docker is compatible with Biocontainers guidelines and practices. The working directory is `/data`. The user is `biodocker`.
+
+## Usage
+
+
+`Pyrho` is a program to estimate recombination rates from population genetic data.
+
+The following programs are included:
+
+- <b>pyrho</b>
+- <b>LDpop</b>

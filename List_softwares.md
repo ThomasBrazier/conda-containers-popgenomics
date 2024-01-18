@@ -22,3 +22,8 @@ You can find lists of softwares here:
 * Biopython Bio.PopGen package https://biopython.org/docs/1.75/api/Bio.PopGen.html
 * GenePop https://genepop.curtin.edu.au
 * Bio++ C++ Library https://github.com/BioPP
+
+
+## Genomics
+
+* SNP/Indels variant annotation into exonic, intronic, intergenic, splicing, 5′-UTRs, 3′-UTRs, upstream, and downstream categories "K. Wang, M. Li, H. Hakonarson. ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Res, 38 (2010), p. e164"
