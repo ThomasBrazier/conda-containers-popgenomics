@@ -1,0 +1,30 @@
+# Example of a complex yaml file for conda env
+name: workshop-test-complex # the name of the virtual env
+channels:
+  - mamba
+  - conda-forge
+  - bioconda
+dependencies:
+  - git # Unix software
+  - r-base # R
+  - jq
+  - bcftools # bioinformatic software
+  - vcftools # bioinformatic software
+  - samtools # bioinformatic software
+  - htslib # bioinformatic library
+  - blas
+  - cyvcf2
+  - gsl # GNU scientific library in C
+  - openssl>1.0 # Unix software
+  - pip # pip package manager
+  - python=3.8
+  - pip: # install with pip - not in conda or dependencies for github installs
+    - cython
+    - msprime
+    - numba
+    - numpy
+    - scikit-learn
+    - pandas
+    - "--editable=git+https://github.com/popgenmethods/ldpop.git#egg=ldpop" # Install directly from github
+    - tskit
+    - "--editable=git+https://github.com/popgenmethods/pyrho.git#egg=pyrho" # Install directly from github

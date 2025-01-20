@@ -1,0 +1,7 @@
+# Example of a basic yaml file for conda env
+name: workshop-test-1 # the name of the virtual env
+channels: # The conda channels where to look for packages
+    - conda-forge
+dependencies: # packages to install
+    - python=3.7
+    - numpy
