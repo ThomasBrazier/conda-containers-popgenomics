@@ -1,5 +1,9 @@
 *.swp
 
+workshop/build-deploy-softwares/conda_path
+workshop/build-deploy-softwares/minimap2.sif
+workshop/build-deploy-softwares/r-rcnv/
+workshop/build-deploy-softwares/test-bind
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
